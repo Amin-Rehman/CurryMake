@@ -92,7 +92,9 @@
                             <constraint firstItem="6A4-1t-AIT" firstAttribute="leading" secondItem="coI-hE-IJN" secondAttribute="leadingMargin" constant="5" id="zOd-Fi-xwa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UKg-Ej-6ci"/>
+                    <navigationItem key="navigationItem" id="UKg-Ej-6ci">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="NOB-YB-AGL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6A4-1t-AIT" id="fwY-oj-dfG"/>
                         <segue destination="rTQ-yP-hhe" kind="show" identifier="cellSelectedSegue" id="om0-ve-gX9"/>
@@ -114,6 +116,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-3T-hWZ">
+                                <rect key="frame" x="25" y="301" width="550" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rXi-FS-BPt">
                                 <rect key="frame" x="180" y="99" width="240" height="190"/>
                                 <constraints>
@@ -132,12 +140,13 @@
                                     <segue destination="wh2-e0-zK3" kind="show" identifier="startCookingSegue" id="hd3-6N-sot"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-3T-hWZ">
-                                <rect key="frame" x="25" y="301" width="550" height="225"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="l5I-uP-eti">
+                                <rect key="frame" x="290" y="184" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KWs-zh-S6S"/>
+                                    <constraint firstAttribute="width" constant="20" id="ZlZ-4P-hiO"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,7 +156,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ADI-3T-hWZ" secondAttribute="trailing" constant="5" id="N7P-Lp-i6S"/>
                             <constraint firstItem="ADI-3T-hWZ" firstAttribute="top" secondItem="rXi-FS-BPt" secondAttribute="bottom" constant="24" id="NAx-62-e4x"/>
                             <constraint firstItem="ADI-3T-hWZ" firstAttribute="leading" secondItem="vyC-q5-Ula" secondAttribute="leadingMargin" constant="5" id="SCw-MB-TvE"/>
+                            <constraint firstItem="l5I-uP-eti" firstAttribute="centerY" secondItem="rXi-FS-BPt" secondAttribute="centerY" id="UvH-k2-rp8"/>
                             <constraint firstItem="ADI-3T-hWZ" firstAttribute="top" secondItem="rXi-FS-BPt" secondAttribute="bottom" constant="2" id="aMz-1C-IVj"/>
+                            <constraint firstItem="l5I-uP-eti" firstAttribute="centerX" secondItem="rXi-FS-BPt" secondAttribute="centerX" id="ck3-KC-fHD"/>
                             <constraint firstItem="b3o-I3-lvp" firstAttribute="top" secondItem="vzY-59-dgB" secondAttribute="bottom" constant="20" id="dMv-4W-d2V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ADI-3T-hWZ" secondAttribute="trailing" constant="5" id="e9Y-IM-sGF"/>
                             <constraint firstItem="rXi-FS-BPt" firstAttribute="top" secondItem="zkL-HJ-OiI" secondAttribute="bottom" constant="35" id="eyh-rP-fOs"/>
@@ -164,6 +175,7 @@
                     <connections>
                         <outlet property="curryImageView" destination="rXi-FS-BPt" id="gG1-ho-N5p"/>
                         <outlet property="ingredientsTextView" destination="ADI-3T-hWZ" id="TY1-Sc-ips"/>
+                        <outlet property="loadingIndicator" destination="l5I-uP-eti" id="Qj7-yI-LJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLu-Le-8lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,6 +220,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hamburger" width="22" height="22"/>
         <image name="HeaderIcon" width="50" height="50"/>
     </resources>
 </document>

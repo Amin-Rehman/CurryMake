@@ -12,7 +12,8 @@
 @interface CMIngredientsViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *curryImageView;
-@property (strong, nonatomic) UIActivityIndicatorView *waitIndicator;
+//@property (strong, nonatomic) UIActivityIndicatorView *waitIndicator;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 
 @end
 
@@ -43,10 +44,7 @@
 - (void)updateImageView {
     __weak CMIngredientsViewController *weakSelf = self;
     
-    self.waitIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [self.waitIndicator startAnimating];
-    [self.waitIndicator setCenter:self.curryImageView.center];
-    [self.view addSubview:self.waitIndicator];
+    [self.loadingIndicator startAnimating];
     
     [CMImageService getImageFromPath:self.item.imageURL completionBlock:^(NSData *imageData){
         __strong CMIngredientsViewController *strongSelf = weakSelf;
@@ -55,8 +53,7 @@
             if(strongSelf) {
                 [strongSelf.curryImageView setImage:[UIImage imageWithData:imageData]];
                 strongSelf.curryImageView.contentMode = UIViewContentModeScaleAspectFit;
-                [strongSelf.waitIndicator removeFromSuperview];
-                strongSelf.waitIndicator = nil;                
+                [strongSelf.loadingIndicator stopAnimating];
             }
         });
     }];

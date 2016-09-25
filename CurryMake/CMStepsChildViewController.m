@@ -9,6 +9,7 @@
 #import "CMStepsChildViewController.h"
 
 @interface CMStepsChildViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *stepsTextView;
 
 @end
 
@@ -21,9 +22,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.screenNumber.text = [NSString stringWithFormat:@"Screen Number = %ld",(long)self.index];
-    
-    NSLog(@"Step is = %@",self.step);
+    self.screenNumber.text = [NSString stringWithFormat:@"%ld",(long)self.index];
+    self.stepsTextView.text = self.step;
 }
 
 - (void)didReceiveMemoryWarning {
