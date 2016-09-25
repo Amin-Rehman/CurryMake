@@ -13,14 +13,7 @@
 
 @implementation CMItem
 
-#pragma - mark Lifecycle
-
-- (NSMutableArray *)steps {
-    if(!_steps){
-        _steps = [[NSMutableArray alloc] init];
-    }
-    return _steps;
-}
+#pragma mark - Lifecycle 
 
 - (instancetype)initWithName:(NSString *)name ingredients:(NSString *)ingredients steps:(NSArray *)steps image:(NSString *)imageURL {
     self = [super init];
@@ -33,5 +26,13 @@
     }
     return self;
 }
+
+- (NSMutableArray *)steps {
+    if(!_steps){
+        _steps = [[NSMutableArray alloc] init];
+    }
+    return _steps;
+}
+
 
 @end

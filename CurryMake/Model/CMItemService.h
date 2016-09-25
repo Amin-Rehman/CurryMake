@@ -10,7 +10,5 @@
 #import "CMItem.h"
 
 @interface CMItemService : NSObject
-
 - (void) getItemsFromFirebaseWithCompletion:(void(^)(NSArray *))completionBlock;
-
 @end

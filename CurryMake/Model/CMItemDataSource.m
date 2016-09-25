@@ -24,6 +24,7 @@
     return _service;
 }
 
+#pragma mark - Item retrieval helper method
 - (void)retrieveItemsListWithCompletionBlock:(void(^)(NSArray <CMItem *>*))completionBlock {    
     NSMutableArray <CMItem *> *curryMakeItemList = [[NSMutableArray alloc] init];
     

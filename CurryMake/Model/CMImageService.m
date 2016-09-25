@@ -10,6 +10,7 @@
 
 @implementation CMImageService
 
+#pragma mark - Public
 + (void)getImageFromPath:(NSString *)path completionBlock:(void(^)(NSData *))completionBlock {
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {

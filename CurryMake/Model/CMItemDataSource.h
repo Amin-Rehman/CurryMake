@@ -10,7 +10,5 @@
 #import "CMItemService.h"
 
 @interface CMItemDataSource : NSObject
-
 - (void)retrieveItemsListWithCompletionBlock:(void(^)(NSArray <CMItem *>*))completionBlock;
-
 @end

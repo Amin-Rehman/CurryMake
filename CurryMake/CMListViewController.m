@@ -47,7 +47,6 @@ static NSString * const cellSelectedSegueIdentifier = @"cellSelectedSegue";
     [self.tableView reloadData];
 }
 
-#pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:cellSelectedSegueIdentifier]) {
         CMIngredientsViewController *ingredientsViewController = (CMIngredientsViewController *)segue.destinationViewController;

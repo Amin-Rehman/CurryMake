@@ -24,19 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.ingredientsTextView setText:self.item.ingredients];
-    [self.ingredientsTextView setFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]];
-    [self.ingredientsTextView setContentOffset:CGPointMake(0,0)];
-    
-    [self.ingredientsLabelTitle setText:self.item.name];
-    [self.ingredientsLabelTitle setFont:[UIFont boldSystemFontOfSize:18]];
-    [self.ingredientsTextView setContentOffset:CGPointMake(0,0)];
-    
-    
     [self updateImageView];
-
+    [self setupTitleLabel];
+    [self setupIngredientsTextView];
+    
 }
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     static NSString * const startCookingSegue = @"startCookingSegue";
@@ -47,6 +39,7 @@
     }
 }
 
+#pragma mark - Private
 - (void)updateImageView {
     __weak CMIngredientsViewController *weakSelf = self;
     
@@ -65,9 +58,15 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) setupTitleLabel {
+    [self.ingredientsLabelTitle setText:self.item.name];
+    [self.ingredientsLabelTitle setFont:[UIFont boldSystemFontOfSize:18]];
+}
+
+- (void) setupIngredientsTextView {
+    [self.ingredientsTextView setText:self.item.ingredients];
+    [self.ingredientsTextView setFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]];
+    [self.ingredientsTextView setContentOffset:CGPointMake(0,0)];
 }
 
 @end

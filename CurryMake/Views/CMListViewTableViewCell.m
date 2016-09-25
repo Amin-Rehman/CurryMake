@@ -13,6 +13,8 @@
 
 @implementation CMListViewTableViewCell
 
+#pragma mark - Lifecycle
+
 - (void)awakeFromNib {
     [super awakeFromNib];    
 }
@@ -21,15 +23,18 @@
     [super setSelected:NO animated:animated];
 }
 
+- (void)prepareForReuse {
+    [self.cellImageView setImage:nil];
+}
+
+#pragma mark - Public
+
 - (void) updateWithImageData:(NSData *)data {
+    self.activityIndicator.hidesWhenStopped = YES;
     [self.cellImageView setImage:[UIImage imageWithData:data]];
     [self.cellImageView setContentMode:UIViewContentModeScaleAspectFill];
     self.cellImageView.layer.cornerRadius = 6.0f;
     [self.activityIndicator stopAnimating];
-}
-
-- (void)prepareForReuse {
-    [self.cellImageView setImage:nil];
 }
 
 @end

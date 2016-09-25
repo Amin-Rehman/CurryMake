@@ -15,12 +15,53 @@
 
 @implementation CMCookingStepsViewController
 
+
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupPagedViewController];
     
 }
+
+#pragma mark - UIPageViewControllerDataSource protocol methods
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+    return [self.item.steps count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+    return 0;
+}
+
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSUInteger index = [(CMStepsChildViewController *)viewController index];
+    
+    if (index == 0) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    
+    NSUInteger index = [(CMStepsChildViewController *)viewController index];
+    
+    index++;
+    
+    if (index == [self.item.steps count]) {
+        return nil;
+    }
+    
+    return [self viewControllerAtIndex:index];
+    
+}
+
+#pragma mark - Private
 
 - (void)setupPagedViewController {
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -41,51 +82,11 @@
 }
 
 - (CMStepsChildViewController *)viewControllerAtIndex:(NSUInteger)index {
-    
     CMStepsChildViewController *stepsChildViewController = [[CMStepsChildViewController alloc] initWithNibName:@"CMStepsChildViewController" bundle:nil];
     stepsChildViewController.index = index;
     stepsChildViewController.step =  [self.item.steps objectAtIndex:index];
     
     return stepsChildViewController;
-    
-}
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return [self.item.steps count];
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    // The selected item reflected in the page indicator.
-    return 0;
-}
-
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    
-    NSUInteger index = [(CMStepsChildViewController *)viewController index];
-    
-    if (index == 0) {
-        return nil;
-    }
-    
-    index--;
-    
-    return [self viewControllerAtIndex:index];
-    
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    
-    NSUInteger index = [(CMStepsChildViewController *)viewController index];
-    
-    
-    index++;
-    
-    if (index == [self.item.steps count]) {
-        return nil;
-    }
-    
-    return [self viewControllerAtIndex:index];
     
 }
 
