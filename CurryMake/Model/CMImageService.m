@@ -14,7 +14,7 @@
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         
-        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:path]];
+        NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:path]];
         
         if(completionBlock) {
             completionBlock(imageData);

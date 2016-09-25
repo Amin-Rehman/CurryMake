@@ -78,6 +78,10 @@ static NSString * const cellSelectedSegueIdentifier = @"cellSelectedSegue";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
+}
+
 #pragma mark - UITableViewDelegate methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if([self.curryItems count] > 0) {
@@ -85,25 +89,5 @@ static NSString * const cellSelectedSegueIdentifier = @"cellSelectedSegue";
         [self performSegueWithIdentifier:cellSelectedSegueIdentifier sender:self];
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

@@ -27,4 +27,9 @@
     self.cellImageView.layer.cornerRadius = 6.0f;
     [self.activityIndicator stopAnimating];
 }
+
+- (void)prepareForReuse {
+    [self.cellImageView setImage:nil];
+}
+
 @end

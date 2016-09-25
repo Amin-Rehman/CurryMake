@@ -12,8 +12,8 @@
 @interface CMIngredientsViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *curryImageView;
-//@property (strong, nonatomic) UIActivityIndicatorView *waitIndicator;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabelTitle;
 
 @end
 
@@ -25,7 +25,13 @@
     [super viewDidLoad];
     
     [self.ingredientsTextView setText:self.item.ingredients];
+    [self.ingredientsTextView setFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]];
     [self.ingredientsTextView setContentOffset:CGPointMake(0,0)];
+    
+    [self.ingredientsLabelTitle setText:self.item.name];
+    [self.ingredientsLabelTitle setFont:[UIFont boldSystemFontOfSize:18]];
+    [self.ingredientsTextView setContentOffset:CGPointMake(0,0)];
+    
     
     [self updateImageView];
 
@@ -63,15 +69,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
