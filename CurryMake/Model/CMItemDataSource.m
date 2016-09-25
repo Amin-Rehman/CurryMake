@@ -10,18 +10,24 @@
 
 
 @interface CMItemDataSource()
+@property (nonatomic, strong) CMItemService *service;
 
 @end
 
 @implementation CMItemDataSource
 
-- (void)retrieveItemsListWithCompletionBlock:(void(^)(NSArray <CMItem *>*))completionBlock {
-    
-    CMItemService *service = [[CMItemService alloc] init];
-    
+#pragma mark - Lifecycle
+- (CMItemService *)service {
+    if(!_service){
+        _service = [[CMItemService alloc] init];
+    }
+    return _service;
+}
+
+- (void)retrieveItemsListWithCompletionBlock:(void(^)(NSArray <CMItem *>*))completionBlock {    
     NSMutableArray <CMItem *> *curryMakeItemList = [[NSMutableArray alloc] init];
     
-    [service getItemsFromFirebaseWithCompletion:^(NSArray *array){
+    [self.service getItemsFromFirebaseWithCompletion:^(NSArray *array){
         
         for(NSDictionary *item in array) {
             

@@ -18,6 +18,12 @@
 		C7C154261D96EBD30017D4DF /* CMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C154251D96EBD30017D4DF /* CMItem.m */; };
 		C7C154291D96EEF70017D4DF /* CMItemDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C154281D96EEF70017D4DF /* CMItemDataSource.m */; };
 		C7C1542C1D96EF910017D4DF /* CMItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C1542B1D96EF910017D4DF /* CMItemService.m */; };
+		C7EAB7C61D970C26005D10B1 /* CMIngredientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EAB7C51D970C26005D10B1 /* CMIngredientsViewController.m */; };
+		C7EAB7CC1D97357B005D10B1 /* CMImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EAB7CB1D97357B005D10B1 /* CMImageService.m */; };
+		C7EAB7D01D97428D005D10B1 /* CMListViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EAB7CF1D97428D005D10B1 /* CMListViewTableViewCell.m */; };
+		C7EAB7D31D97E4A6005D10B1 /* CMCookingStepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EAB7D21D97E4A6005D10B1 /* CMCookingStepsViewController.m */; };
+		C7EAB7D71D97E4F9005D10B1 /* CMStepsChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EAB7D51D97E4F9005D10B1 /* CMStepsChildViewController.m */; };
+		C7EAB7D81D97E4F9005D10B1 /* CMStepsChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EAB7D61D97E4F9005D10B1 /* CMStepsChildViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,17 @@
 		C7C154281D96EEF70017D4DF /* CMItemDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMItemDataSource.m; path = Model/CMItemDataSource.m; sourceTree = "<group>"; };
 		C7C1542A1D96EF910017D4DF /* CMItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMItemService.h; path = Model/CMItemService.h; sourceTree = "<group>"; };
 		C7C1542B1D96EF910017D4DF /* CMItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMItemService.m; path = Model/CMItemService.m; sourceTree = "<group>"; };
+		C7EAB7C41D970C26005D10B1 /* CMIngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMIngredientsViewController.h; sourceTree = "<group>"; };
+		C7EAB7C51D970C26005D10B1 /* CMIngredientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMIngredientsViewController.m; sourceTree = "<group>"; };
+		C7EAB7CA1D97357B005D10B1 /* CMImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMImageService.h; path = Model/CMImageService.h; sourceTree = "<group>"; };
+		C7EAB7CB1D97357B005D10B1 /* CMImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMImageService.m; path = Model/CMImageService.m; sourceTree = "<group>"; };
+		C7EAB7CE1D97428D005D10B1 /* CMListViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMListViewTableViewCell.h; path = Views/CMListViewTableViewCell.h; sourceTree = "<group>"; };
+		C7EAB7CF1D97428D005D10B1 /* CMListViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMListViewTableViewCell.m; path = Views/CMListViewTableViewCell.m; sourceTree = "<group>"; };
+		C7EAB7D11D97E4A6005D10B1 /* CMCookingStepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCookingStepsViewController.h; sourceTree = "<group>"; };
+		C7EAB7D21D97E4A6005D10B1 /* CMCookingStepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCookingStepsViewController.m; sourceTree = "<group>"; };
+		C7EAB7D41D97E4F9005D10B1 /* CMStepsChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStepsChildViewController.h; sourceTree = "<group>"; };
+		C7EAB7D51D97E4F9005D10B1 /* CMStepsChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMStepsChildViewController.m; sourceTree = "<group>"; };
+		C7EAB7D61D97E4F9005D10B1 /* CMStepsChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMStepsChildViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +110,7 @@
 		C7073E291D96DE1C00A82959 /* CurryMake */ = {
 			isa = PBXGroup;
 			children = (
+				C7EAB7CD1D974253005D10B1 /* Views */,
 				C7C154231D96E89D0017D4DF /* Model */,
 				C7C154221D96E87D0017D4DF /* Controllers */,
 				C7073E331D96DE1C00A82959 /* Main.storyboard */,
@@ -120,6 +138,13 @@
 			children = (
 				C7073E301D96DE1C00A82959 /* CMListViewController.h */,
 				C7073E311D96DE1C00A82959 /* CMListViewController.m */,
+				C7EAB7C41D970C26005D10B1 /* CMIngredientsViewController.h */,
+				C7EAB7C51D970C26005D10B1 /* CMIngredientsViewController.m */,
+				C7EAB7D11D97E4A6005D10B1 /* CMCookingStepsViewController.h */,
+				C7EAB7D21D97E4A6005D10B1 /* CMCookingStepsViewController.m */,
+				C7EAB7D41D97E4F9005D10B1 /* CMStepsChildViewController.h */,
+				C7EAB7D51D97E4F9005D10B1 /* CMStepsChildViewController.m */,
+				C7EAB7D61D97E4F9005D10B1 /* CMStepsChildViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -133,8 +158,19 @@
 				C7C154281D96EEF70017D4DF /* CMItemDataSource.m */,
 				C7C1542A1D96EF910017D4DF /* CMItemService.h */,
 				C7C1542B1D96EF910017D4DF /* CMItemService.m */,
+				C7EAB7CA1D97357B005D10B1 /* CMImageService.h */,
+				C7EAB7CB1D97357B005D10B1 /* CMImageService.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C7EAB7CD1D974253005D10B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7EAB7CE1D97428D005D10B1 /* CMListViewTableViewCell.h */,
+				C7EAB7CF1D97428D005D10B1 /* CMListViewTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EAB7D81D97E4F9005D10B1 /* CMStepsChildViewController.xib in Resources */,
 				C7073E3A1D96DE1C00A82959 /* LaunchScreen.storyboard in Resources */,
 				C7073E421D96DED500A82959 /* GoogleService-Info.plist in Resources */,
 				C7073E371D96DE1C00A82959 /* Assets.xcassets in Resources */,
@@ -263,8 +300,13 @@
 				C7073E321D96DE1C00A82959 /* CMListViewController.m in Sources */,
 				C7073E2F1D96DE1C00A82959 /* CMAppDelegate.m in Sources */,
 				C7C154291D96EEF70017D4DF /* CMItemDataSource.m in Sources */,
+				C7EAB7CC1D97357B005D10B1 /* CMImageService.m in Sources */,
 				C7C154261D96EBD30017D4DF /* CMItem.m in Sources */,
 				C7073E2C1D96DE1C00A82959 /* main.m in Sources */,
+				C7EAB7D31D97E4A6005D10B1 /* CMCookingStepsViewController.m in Sources */,
+				C7EAB7D01D97428D005D10B1 /* CMListViewTableViewCell.m in Sources */,
+				C7EAB7D71D97E4F9005D10B1 /* CMStepsChildViewController.m in Sources */,
+				C7EAB7C61D970C26005D10B1 /* CMIngredientsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,6 @@
 
 @implementation CMItemService
 
-
 - (void) getItemsFromFirebaseWithCompletion:(void(^)(NSArray *))completionBlock {
     
     self.ref = [[FIRDatabase database] reference];
@@ -27,8 +26,6 @@
         if(completionBlock) {
             completionBlock(postArray);
         }
-        
-
     }];
         
 }

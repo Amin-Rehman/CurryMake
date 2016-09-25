@@ -10,9 +10,9 @@
 
 @interface CMItem : NSObject
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic,strong) NSMutableArray *ingredients;
+@property (nonatomic,strong) NSString *ingredients;
 @property (nonatomic,strong) NSMutableArray *steps;
 @property (nonatomic,copy) NSString *imageURL;
 
-- (instancetype)initWithName:(NSString *)name ingredients:(NSArray *)ingredients steps:(NSArray *)steps image:(NSString *)imageURL;
+- (instancetype)initWithName:(NSString *)name ingredients:(NSString *)ingredients steps:(NSArray *)steps image:(NSString *)imageURL;
 @end

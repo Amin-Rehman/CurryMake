@@ -15,25 +15,6 @@
 
 #pragma - mark Lifecycle
 
-- (instancetype)initWithName:(NSString *)name ingredients:(NSArray *)ingredients steps:(NSArray *)steps image:(NSString *)imageURL {
-    self = [super init];
-    if(self) {
-        _name = name;
-        _ingredients = [ingredients mutableCopy];
-        _steps = [steps mutableCopy];
-        _imageURL = imageURL;
-        
-    }
-    return self;
-}
-
-- (NSMutableArray *)ingredients {
-    if(!_ingredients){
-        _ingredients = [[NSMutableArray alloc] init];
-    }
-    return _ingredients;
-}
-
 - (NSMutableArray *)steps {
     if(!_steps){
         _steps = [[NSMutableArray alloc] init];
@@ -41,5 +22,16 @@
     return _steps;
 }
 
+- (instancetype)initWithName:(NSString *)name ingredients:(NSString *)ingredients steps:(NSArray *)steps image:(NSString *)imageURL {
+    self = [super init];
+    if(self) {
+        _name = name;
+        _ingredients = ingredients;
+        _steps = [steps mutableCopy];
+        _imageURL = imageURL;
+        
+    }
+    return self;
+}
 
 @end

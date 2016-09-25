@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMListViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
+@interface CMListViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end
 
