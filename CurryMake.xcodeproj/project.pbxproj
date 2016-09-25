@@ -34,8 +34,8 @@
 		C7073E2B1D96DE1C00A82959 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7073E2D1D96DE1C00A82959 /* CMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 		C7073E2E1D96DE1C00A82959 /* CMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
-		C7073E301D96DE1C00A82959 /* CMListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMListViewController.h; sourceTree = "<group>"; };
-		C7073E311D96DE1C00A82959 /* CMListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMListViewController.m; sourceTree = "<group>"; };
+		C7073E301D96DE1C00A82959 /* CMListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CMListViewController.h; path = Controllers/CMListViewController.h; sourceTree = "<group>"; };
+		C7073E311D96DE1C00A82959 /* CMListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CMListViewController.m; path = Controllers/CMListViewController.m; sourceTree = "<group>"; };
 		C7073E341D96DE1C00A82959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7073E361D96DE1C00A82959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7073E391D96DE1C00A82959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,17 +47,17 @@
 		C7C154281D96EEF70017D4DF /* CMItemDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMItemDataSource.m; path = Model/CMItemDataSource.m; sourceTree = "<group>"; };
 		C7C1542A1D96EF910017D4DF /* CMItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMItemService.h; path = Model/CMItemService.h; sourceTree = "<group>"; };
 		C7C1542B1D96EF910017D4DF /* CMItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMItemService.m; path = Model/CMItemService.m; sourceTree = "<group>"; };
-		C7EAB7C41D970C26005D10B1 /* CMIngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMIngredientsViewController.h; sourceTree = "<group>"; };
-		C7EAB7C51D970C26005D10B1 /* CMIngredientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMIngredientsViewController.m; sourceTree = "<group>"; };
+		C7EAB7C41D970C26005D10B1 /* CMIngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMIngredientsViewController.h; path = Controllers/CMIngredientsViewController.h; sourceTree = "<group>"; };
+		C7EAB7C51D970C26005D10B1 /* CMIngredientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMIngredientsViewController.m; path = Controllers/CMIngredientsViewController.m; sourceTree = "<group>"; };
 		C7EAB7CA1D97357B005D10B1 /* CMImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMImageService.h; path = Model/CMImageService.h; sourceTree = "<group>"; };
 		C7EAB7CB1D97357B005D10B1 /* CMImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMImageService.m; path = Model/CMImageService.m; sourceTree = "<group>"; };
 		C7EAB7CE1D97428D005D10B1 /* CMListViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMListViewTableViewCell.h; path = Views/CMListViewTableViewCell.h; sourceTree = "<group>"; };
 		C7EAB7CF1D97428D005D10B1 /* CMListViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMListViewTableViewCell.m; path = Views/CMListViewTableViewCell.m; sourceTree = "<group>"; };
-		C7EAB7D11D97E4A6005D10B1 /* CMCookingStepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCookingStepsViewController.h; sourceTree = "<group>"; };
-		C7EAB7D21D97E4A6005D10B1 /* CMCookingStepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCookingStepsViewController.m; sourceTree = "<group>"; };
-		C7EAB7D41D97E4F9005D10B1 /* CMStepsChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStepsChildViewController.h; sourceTree = "<group>"; };
-		C7EAB7D51D97E4F9005D10B1 /* CMStepsChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMStepsChildViewController.m; sourceTree = "<group>"; };
-		C7EAB7D61D97E4F9005D10B1 /* CMStepsChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMStepsChildViewController.xib; sourceTree = "<group>"; };
+		C7EAB7D11D97E4A6005D10B1 /* CMCookingStepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCookingStepsViewController.h; path = Controllers/CMCookingStepsViewController.h; sourceTree = "<group>"; };
+		C7EAB7D21D97E4A6005D10B1 /* CMCookingStepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCookingStepsViewController.m; path = Controllers/CMCookingStepsViewController.m; sourceTree = "<group>"; };
+		C7EAB7D41D97E4F9005D10B1 /* CMStepsChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMStepsChildViewController.h; path = Controllers/CMStepsChildViewController.h; sourceTree = "<group>"; };
+		C7EAB7D51D97E4F9005D10B1 /* CMStepsChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMStepsChildViewController.m; path = Controllers/CMStepsChildViewController.m; sourceTree = "<group>"; };
+		C7EAB7D61D97E4F9005D10B1 /* CMStepsChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMStepsChildViewController.xib; path = Controllers/CMStepsChildViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
